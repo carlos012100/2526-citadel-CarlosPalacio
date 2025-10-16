@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useEffect, useState, useContext } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import DefensesTab from './components/Defenses';
 import LocationTab from './components/Location';
 import NavBar from './navBar/Navigation';
