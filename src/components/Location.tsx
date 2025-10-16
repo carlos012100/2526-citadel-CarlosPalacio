@@ -1,4 +1,4 @@
-import type { Landmark, Coordinates, Location } from '../interfaces/citadelInterfaces';
+import type { Location } from '../interfaces/citadelInterfaces';
 
 
 

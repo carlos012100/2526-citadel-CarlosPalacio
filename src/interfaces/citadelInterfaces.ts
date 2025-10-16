@@ -82,9 +82,12 @@ export interface Inhabitants {
 }
 
 // RESOURCES 
-export interface FoodResource {
-  type: string;
-  quantity: number;
+
+interface commonAtt {
+    type: string,
+    quantity: number
+}
+export interface FoodResource extends commonAtt {
   unit: string;
 }
 
@@ -99,19 +102,9 @@ export interface Storage {
   water: WaterResource;
 }
 
-export interface WeaponResource {
-  type: string;
-  quantity: number;
-}
-
-export interface ShieldResource {
-  type: string;
-  quantity: number;
-}
-
 export interface Armory {
-  weapons: WeaponResource[];
-  shields: ShieldResource[];
+  weapons: commonAtt[];
+  shields: commonAtt[];
 }
 
 export interface Resources {
@@ -119,7 +112,7 @@ export interface Resources {
   armory: Armory;
 }
 
-// -------------------- HISTORY --------------------
+// HISTORY
 export interface Founded {
   year: number;
   by: string;
@@ -137,7 +130,7 @@ export interface History {
   majorEvents: MajorEvent[];
 }
 
-// -------------------- CITadel --------------------
+// CITadel 
 export interface Citadel {
   name: string;
   location: Location;
